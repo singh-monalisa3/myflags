@@ -30,7 +30,7 @@ const API_URL =" https://xcountries-backend.azurewebsites.net/all";
 const [countries, setcountries] = useState([]);
 useEffect(()=>{
     fetch(API_URL).then(res => res.json()).then(data => {setcountries(data)})
-    .catch((error)=>console.error("Error:",error))
+    .catch((error)=>console.error("Error fetching data: ",error.message))
 },[])
 
 
